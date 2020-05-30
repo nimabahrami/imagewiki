@@ -17,7 +17,7 @@ thumbnail_get=io.BytesIO(image_url_get.read())
 thumbnail=Image.open(thumbnail_get).resize((275,600))
 print(image_url)
 f=''
-for i in range(10):
+for i in range(len(result)):
     paragraphs=re.sub(r'<.*?>','',str(result[i]))
     f=f+paragraphs
 l=len(result)
