@@ -22,25 +22,25 @@ for i in range(10):
     f=f+paragraphs
 l=len(result)
 print(l)
-printable=f.replace('<p>','')[0:600]+"..."
+printable=f.replace('<p>','')[0:550]+"..."
 print(printable)
 
 source_img = Image.open('thumbnail.jpeg')
 draw = ImageDraw.Draw(source_img)
-draw.rectangle(((0, 00), (800, 600)), fill="#041f02")
+draw.rectangle(((0, 00), (800, 600)), fill="#222b45")
 lines = textwrap.wrap(printable, width=40)
 w,h=draw.textsize(lines[0].encode('utf-8'))
 y_text = 40
-y_text_p = 80
+y_text_p = 110
 titles=website.split('/')[-1].replace('_',' ')
-titles_wrap= textwrap.wrap(titles, width=40)
+titles_wrap= textwrap.wrap(titles, width=20)
 fontsize=10
 font=ImageFont.truetype(font='georgia.ttf',size=22)
 font_title=ImageFont.truetype(font='georgiab.ttf',size=28)
 
 for title in titles_wrap:
     draw.text(((840-w)/2, y_text), title,font=font_title)
-    y_text_p += 26
+    y_text += 28
 
 for line in lines:
     draw.text(((840-w)/2, y_text_p), line,font=font)
