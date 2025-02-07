@@ -53,5 +53,5 @@ for line in lines:
 source_img.paste(thumbnail,(0,0))
 credit='ig: sacredwakizashi'
 draw.text((650, 550), credit,font=font_credit)
-img_res=source_img.save('kir.png')
+img_res=source_img.save('output.png')
 
